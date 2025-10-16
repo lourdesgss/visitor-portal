@@ -1,8 +1,15 @@
-/** @type {import('tailwindcss').Config} */
-export default {
-    content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
-    theme: {
-        extend: {},
+const colors = require('tailwindcss/colors');
+const { colours } = require("./src/utils/colours");
+
+module.exports = {
+  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
+  theme: {
+    colors: {
+      ...colors,
     },
-    plugins: [],
-}
+    extend: {},
+  },
+  plugins: [
+    require('tailwindcss-animate'),
+  ],
+};

@@ -1,17 +1,13 @@
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import LanguageSelection from "./pages/LanguageSelection";
-import EntryForm from "./pages/EntryForm";
-import WaitingPage from "./pages/WaitingPage";
 import './index.css';
+import AccessForm from "@/pages/AccessForm.tsx";
 
 function App() {
     return (
         <Router>
             <Routes>
-                <Route path="/" element={<LanguageSelection />} />
-                <Route path="/form" element={<EntryForm />} />
-                <Route path="/waiting" element={<WaitingPage />} />
+                <Route path="/" element={<AccessForm />} />
             </Routes>
         </Router>
     );
